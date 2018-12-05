@@ -1,5 +1,5 @@
 #N canvas 524 50 1392 805 10;
-#X declare -path seq3(12-4);
+#X declare -path seq3(12-5);
 #X obj 211 298 throw~ outL;
 #X obj 297 298 throw~ outR;
 #X obj 694 520 s addsyn-1-filterPole;
@@ -31,17 +31,22 @@
 #X text 387 300 sound out;
 #X obj 212 251 *~ 1;
 #X obj 211 83 r notes;
-#X obj 271 111 r aux;
+#X obj 285 111 r aux;
 #X obj 450 74 loadbang;
-#X obj 211 152 cg-seq3 1;
 #X msg 450 96 120;
 #X obj 450 121 cg-metro 1;
 #X obj 666 436 r seq3-1-k4;
 #X obj 496 431 r seq3-1-k3;
 #X obj 335 428 r seq3-1-k2;
 #X obj 159 440 r seq3-1-k1;
-#X obj 578 262 declare -path seq3(12-4);
-#X obj 318 111 r fs;
+#X obj 332 111 r fs;
+#X obj 578 262 declare -path seq3(12-5);
+#X obj 211 152 cg-seq3 1 1;
+#X text 311 156 2nd argument set to 1 tells seq to round length to
+nearest beat from clock.;
+#X text 544 120 metro;
+#X text 540 73 if no incoming clock from link or midi run the internal
+metro at 120 bpm;
 #X connect 5 0 4 0;
 #X connect 6 0 3 0;
 #X connect 7 0 2 0;
@@ -59,13 +64,13 @@
 #X connect 25 0 26 0;
 #X connect 29 0 0 0;
 #X connect 29 0 1 0;
-#X connect 30 0 33 0;
-#X connect 31 0 33 1;
-#X connect 32 0 34 0;
-#X connect 33 0 18 0;
-#X connect 34 0 35 0;
-#X connect 36 0 2 0;
-#X connect 37 0 3 0;
-#X connect 38 0 4 0;
-#X connect 39 0 17 0;
-#X connect 41 0 33 1;
+#X connect 30 0 41 0;
+#X connect 31 0 41 1;
+#X connect 32 0 33 0;
+#X connect 33 0 34 0;
+#X connect 35 0 2 0;
+#X connect 36 0 3 0;
+#X connect 37 0 4 0;
+#X connect 38 0 17 0;
+#X connect 39 0 41 1;
+#X connect 41 0 18 0;

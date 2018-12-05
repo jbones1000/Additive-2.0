@@ -1,4 +1,4 @@
-#N canvas 346 86 1282 893 10;
+#N canvas 347 83 1282 893 10;
 #X obj 180 200 inlet master-clock(f);
 #X obj 360 846 outlet;
 #X obj 441 146 f;
@@ -40,6 +40,15 @@
 #X obj 457 402 f;
 #X obj 457 424 + 1;
 #X obj 475 376 r \$0-len;
+#X text 537 231 filter a bang which reports the textfile is done;
+#X text 585 256 trim the list prepend;
+#X text 741 282 route the dummy note to trigger a reset \, and route
+the length to set loop length;
+#X text 924 313 take apart the list to compare the time \, store the
+pther parts of the list;
+#X text 460 514 greater than or equal to compare;
+#X text 354 553 if yes recompose the list and send out;
+#X text 935 647 length out to other objects;
 #X connect 0 0 8 0;
 #X connect 2 0 11 0;
 #X connect 3 0 2 1;

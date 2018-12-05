@@ -1,4 +1,4 @@
-#N canvas 74 50 1536 956 10;
+#N canvas 75 50 1536 956 10;
 #X obj 119 812 <, f 5;
 #X obj 119 776 t f f;
 #X obj 119 837 sel 1;
@@ -14,7 +14,7 @@ that have no tempo. turn on(1) for patches that will sync to clock
 #X obj 506 827 outlet;
 #X obj 937 815 outlet MIDI BPM;
 #X obj 717 824 outlet LINK;
-#N canvas 466 221 618 485 og-metro 0;
+#N canvas 467 218 618 485 og-metro 0;
 #X obj 117 19 inlet bpm;
 #X obj 115 386 outlet ticks;
 #X obj 325 386 outlet BPM;
@@ -30,7 +30,7 @@ that have no tempo. turn on(1) for patches that will sync to clock
 #X obj 91 175 phasor~ 1;
 #X obj 104 269 * 100;
 #X obj 104 313 / 100;
-#X text 147 296 divide clock into steps;
+#X text 147 296 divide clock into 100 ticks;
 #X connect 0 0 2 0;
 #X connect 0 0 8 0;
 #X connect 3 0 13 0;
