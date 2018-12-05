@@ -31,7 +31,7 @@
 #X text 387 300 sound out;
 #X obj 212 251 *~ 1;
 #X obj 211 83 r notes;
-#X obj 285 111 r aux;
+#X obj 285 112 r aux;
 #X obj 450 74 loadbang;
 #X msg 450 96 120;
 #X obj 450 121 cg-metro 1;
@@ -39,14 +39,17 @@
 #X obj 496 431 r seq3-1-k3;
 #X obj 335 428 r seq3-1-k2;
 #X obj 159 440 r seq3-1-k1;
-#X obj 332 111 r fs;
+#X obj 332 112 r fs;
 #X obj 578 262 declare -path seq3(12-5);
-#X obj 211 152 cg-seq3 1 1;
 #X text 311 156 2nd argument set to 1 tells seq to round length to
 nearest beat from clock.;
 #X text 544 120 metro;
 #X text 540 73 if no incoming clock from link or midi run the internal
 metro at 120 bpm;
+#X obj 211 155 cg-seq3 1 1;
+#X obj 960 288 s midiInGate;
+#X obj 970 251 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X connect 5 0 4 0;
 #X connect 6 0 3 0;
 #X connect 7 0 2 0;
@@ -64,13 +67,14 @@ metro at 120 bpm;
 #X connect 25 0 26 0;
 #X connect 29 0 0 0;
 #X connect 29 0 1 0;
-#X connect 30 0 41 0;
-#X connect 31 0 41 1;
+#X connect 30 0 44 0;
+#X connect 31 0 44 1;
 #X connect 32 0 33 0;
 #X connect 33 0 34 0;
 #X connect 35 0 2 0;
 #X connect 36 0 3 0;
 #X connect 37 0 4 0;
 #X connect 38 0 17 0;
-#X connect 39 0 41 1;
-#X connect 41 0 18 0;
+#X connect 39 0 44 1;
+#X connect 44 0 18 0;
+#X connect 46 0 45 0;
