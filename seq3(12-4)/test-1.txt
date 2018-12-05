@@ -1,0 +1,18 @@
+dummy x;
+length 9;
+note 1 76 100;
+note 1 83 100;
+note 1 79 100;
+note 1 72 100;
+note-off 1.875 72 0;
+note-off 1.91667 83 0;
+note-off 1.91667 76 0;
+note-off 1.91667 79 0;
+note 4.45833 72 100;
+note 4.45833 76 100;
+note 4.5 79 100;
+note 4.5 83 100;
+note-off 6.70833 79 0;
+note-off 6.75 72 0;
+note-off 6.75 76 0;
+note-off 6.79167 83 0;
