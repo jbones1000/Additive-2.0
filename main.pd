@@ -1,4 +1,4 @@
-#N canvas 275 63 1392 805 10;
+#N canvas 280 50 1392 805 10;
 #X declare -path seq3;
 #X obj 215 298 throw~ outL;
 #X obj 301 298 throw~ outR;
